@@ -1,5 +1,5 @@
 import { Navbar } from "./components";
-import { Home, Create, Blogs } from "./views";
+import { Home, Create, Blogs, Error } from "./views";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const App = () => {
@@ -17,6 +17,9 @@ const App = () => {
             </Route>
             <Route path="/blogs/:id">
               <Blogs />
+            </Route>
+            <Route path="*">
+              <Error />
             </Route>
           </Switch>
         </div>
